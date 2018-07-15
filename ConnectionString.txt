@@ -1,0 +1,14 @@
+connectionString="Data Source=hubnet.database.windows.net;Initial Catalog=hubdb;Persist Security Info=False;User ID=hubsa;PWD=eProc@DICT;Pooling=False;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;"
+
+
+Data Source=CHARNEL;Initial Catalog=hubdb;Persist Security Info=False;User ID=sa;PWD=sql;Pooling=False;MultipleActiveResultSets=False;Encrypt=False;TrustServerCertificate=True
+
+
+ if (context.Users.Count() <= 0)
+            {
+                context.Users.Add(new Entities.User { UserName = "DEns", UserRole = "Administrator", IsActive = true, Password = "test" });
+                context.Users.Add(new Entities.User { UserName = "Allan", UserRole = "Administrator", IsActive = true, Password = "test" });
+                context.Users.Add(new Entities.User { UserName = "Andrian", UserRole = "Administrator", IsActive = true, Password = "test" });
+                context.Users.Add(new Entities.User { UserName = "Patrick", UserRole = "Administrator", IsActive = true, Password = "test" });
+            }
+            context.SaveChanges();
